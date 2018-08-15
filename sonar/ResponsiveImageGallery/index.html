@@ -143,7 +143,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- ***** Elements Area Start ***** -->
     <section class="elements-area section-padding-100-1" style="background-color: white;">
-        <div class="container-fluid" style="background-color: white;">
+        <div class="container" style="background-color: white;">
             <div class="sonar1"> 
                 <div><center>   <img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></center></div>
                 <div><center>   <img src="images/thumbs/2.jpg" data-large="images/2.jpg" alt="image02" data-description="A plaintful story from a sistering vale" /></center></div>
@@ -202,12 +202,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
           asNavFor: '.sonar1'
         });
         $('.sonar1').slick({
-          slidesToShow: 6,
+          slidesToShow: 5,
           slidesToScroll: 1,
           asNavFor: '.sonar2',
           dots: true,
           centerMode: true,
-          focusOnSelect: true
+          focusOnSelect: true,
+         centerPadding : 0,
+
         });
     });
   </script>
@@ -220,6 +222,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       opacity: .75;
 
 }
+
+/*
+    .slick-slide {
+    margin: 0 27px;
+  }
+*/
+
+  .slick-list {
+    margin: 0 -27px;
+  }
+
             .slick-prev{
                 left: 10px;
             }
