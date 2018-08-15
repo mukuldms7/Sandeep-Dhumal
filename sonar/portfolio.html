@@ -30,7 +30,7 @@
     <!-- Preloader End -->
 
     <!-- Grids -->
-    <div class="grids d-flex justify-content-between">
+<!--    <div class="grids d-flex justify-content-between">
         <div class="grid1"></div>
         <div class="grid2"></div>
         <div class="grid3"></div>
@@ -40,7 +40,7 @@
         <div class="grid7"></div>
         <div class="grid8"></div>
         <div class="grid9"></div>
-    </div>
+    </div>-->
 
     <!-- ***** Main Menu Area Start ***** -->
     <div class="mainMenu d-flex align-items-center justify-content-between">
@@ -259,6 +259,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
                 event.preventDefault();
                 $(this).ekkoLightbox();
+                alwaysShowClose: true; wrapping: false;
             });
     
     </script>
@@ -271,6 +272,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   height: 60px;
   background-color: #f5f5f5;
 }
+        .ekko-lightbox .ekko-lightbox-container {
+            
+            border: 0px;
+        }
+        .modal-body{
+            padding: 0px;
+        }
     </style>
 </body>
 
