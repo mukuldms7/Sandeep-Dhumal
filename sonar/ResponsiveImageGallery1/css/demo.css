@@ -2,7 +2,7 @@
 
 /* General Codrops Demo Style */
 body{
-	background:white url(../images/pattern.png) repeat top left;
+	/*background:#1F1F1F url(../images/pattern.png) repeat top left*/;
 	color:#fff;
 	font-family: 'PT Sans Narrow', Arial, sans-serif;
 	font-size:14px;
@@ -17,7 +17,7 @@ a:hover{
 p.sub{
 	padding:25px 10px 10px 10px;
 	text-align:left;
-	color:#aaa;
+	/*color:#aaa;*/
 }
 .clr{
 	clear:both;
@@ -58,7 +58,7 @@ h1 span{
 	padding:0 4px;
 	letter-spacing:1px;
 	text-shadow:1px 1px 1px #000;
-	color:#ddd;
+	/*color:#ddd;*/
 }
 .header a:hover{
 	color:#fff;
