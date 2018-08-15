@@ -145,7 +145,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <section class="elements-area section-padding-100-1" style="background-color: white;">
         <div class="container-fluid" style="background-color: white;">
             <div class="sonar1"> 
-                <div><center>   <img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></center></div>
+                <div><center>   <img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" onclick="showimage()"/></center></div>
                 <div><center>   <img src="images/thumbs/2.jpg" data-large="images/2.jpg" alt="image02" data-description="A plaintful story from a sistering vale" /></center></div>
                 <div><center>   <img src="images/thumbs/3.jpg" data-large="images/3.jpg" alt="image03" data-description="A plaintful story from a sistering vale" /></center></div>
                 <div><center>   <img src="images/thumbs/4.jpg" data-large="images/4.jpg" alt="image04" data-description="My spirits to attend this double voice accorded" /></center> </div>
@@ -213,6 +213,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
         });
     });
+          
+function showimage()
+{
+    $("body").css("background-image","url('images/1.jpg')"); // Onclick of button the background image of body will be test here. Give the image path in url
+    $('#clickbutton').hide(); //This will hide the button specified in html
+}
   </script>
 		<style>
 .slick-prev:before, .slick-next:before { 
