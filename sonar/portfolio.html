@@ -16,7 +16,7 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
-
+ <link rel="stylesheet" href="dist/ekko-lightbox.css">
    
 </head>
 
@@ -153,13 +153,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- ***** Hero Area End ***** -->
 
     <!-- ****** Gallery Area Start ****** -->
-    <section class="sonar-projects-area" id="projects" style="background-color: white;">
-        <div class="container-fluid">
-            <div class="row sonar-portfolio">
-
+    <section  style="background-color: white; margin-top: 30px; ">
+        <div class="container-fluid" style="background-color: white;">
+            <div class="row ">
                 <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item landscapes studio wow fadeInUpBig" data-wow-delay="300ms">
-                    <a class="gallery-img" href="img/portfolio-img/LEP-2.jpg"><img src="img/portfolio-img/LEP-2.jpg" alt=""></a>
+                <div class="col-12 col-sm-6 col-lg-4 ">
+                    <a data-toggle="lightbox" data-gallery="example-gallery" href="img/portfolio-img/LEP-2.jpg">
+                        <img src="img/portfolio-img/LEP-2.jpg" alt="" class="img-fluid"></a>
                     <!-- Gallery Content -->
                     <div class="gallery-content">
                         <h4>It's All About Love</h4>
@@ -168,8 +168,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 </div>
 
                 <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item portraits fashion wow fadeInUpBig" data-wow-delay="500ms">
-                    <a class="gallery-img" href="img/portfolio-img/LEP-4.jpg"><img src="img/portfolio-img/LEP-4.jpg" alt=""></a>
+                <div class="col-12 col-sm-6 col-lg-4 ">
+                    <a data-toggle="lightbox" data-gallery="example-gallery" href="img/portfolio-img/LEP-4.jpg">
+                        <img src="img/portfolio-img/LEP-4.jpg" alt="" class="img-fluid"></a>
                     <!-- Gallery Content -->
                     <div class="gallery-content">
                         <h4>The Flight of 'Tri'-umph</h4>
@@ -178,26 +179,48 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 </div>
 
                 <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item landscapes studio wow fadeInUpBig" data-wow-delay="700ms">
-                    <a class="gallery-img" href="img/portfolio-img/LEP-3.jpg"><img src="img/portfolio-img/LEP-3.jpg" alt=""></a>
+                <div class="col-12 col-sm-6 col-lg-4 ">
+                    <a data-toggle="lightbox" data-gallery="example-gallery" href="img/portfolio-img/LEP-3.jpg">
+                        <img src="img/portfolio-img/LEP-3.jpg" alt="" class="img-fluid"></a>
                     <!-- Gallery Content -->
                     <div class="gallery-content">
                         <h4>The Blue Eyed Boy</h4>
                         <p>Indian Leopard</p>
                     </div>
                 </div>
-
-               
-
-                
             </div>
 
         </div>
     </section>
-    <!-- ****** Gallery Area End ****** -->  
-    
+    <!-- ****** Gallery Area End ****** -->  <!--
+    <div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="row">
+            <a href="img/portfolio-img/LEP-3.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+            </a>
+            <a href="img/portfolio-img/LEP-3.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+            </a>
+        </div>
+        <div class="row">
+            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+            </a>
+        </div>
+    </div>
+</div>-->
     <!-- ***** Footer Area Start ***** -->
-    <footer class="footer-area" style="background-color: white;">
+    <footer class="footer-area" style="background-color: white; position: sticky;">
         <!-- back end content -->
         <!--<div class="backEnd-content">
             <img class="dots" src="img/core-img/dots.png" alt="">
@@ -231,29 +254,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active js -->
     <script src="js/active.js"></script>
 
-<script>
-    $('div').magnificPopup({ 
-  type: 'image',
-  delegate: 'a',
-  
-  gallery:{enabled:true},
-  callbacks: {
-    
-    buildControls: function() {
-      // re-appends controls inside the main container
-      this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
-    }
-    
-  }
-});
+     <script src="dist/ekko-lightbox.min.js"></script> <script src="dist/ekko-lightbox.js"></script>
+    <script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
     
     </script>
-    
     <style>
-    .mfp-s-loading .mfp-arrow { 
-   display: none;
+    .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }
-    
     </style>
 </body>
 
