@@ -1266,7 +1266,7 @@ img {
     z-index: -5; }
   .sonar-about-us-area.second-part {
     position: relative;
-    padding: 20px 0; }
+    padding: 80px 0; }
     .sonar-about-us-area.second-part::after {
       content: "";
       width: 50%;
